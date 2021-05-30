@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/yemeklerAnasayfaFragment">
+    <fragment
+        android:id="@+id/yemeklerAnasayfaFragment"
+        android:name="com.example.yemeksepeti.fragment.YemeklerAnasayfaFragment"
+        android:label="YemekelrAnasayfaFragment"
+        tools:layout="@layout/fragment_yemekler_anasayfa">
+        <action
+            android:id="@+id/yemekDetayGecis"
+            app:destination="@id/yemekDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemekDetayFragment"
+        android:name="com.example.yemeksepeti.fragment.YemekDetayFragment"
+        android:label="YemekDetayFragment"
+        tools:layout="@layout/fragment_yemek_detay">
+        <argument
+            android:name="yemekNesne"
+            app:argType="com.example.yemeksepeti.entity.Yemekler" />
+    </fragment>
+</navigation>
